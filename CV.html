@@ -146,24 +146,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyverse' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ dplyr     1.1.4     ✔ readr     2.1.4
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   4.0.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.0.4     
+✔ ggplot2   3.5.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>blood_pressures <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"blood_pressure_measures.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>blood_pressures <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"blood_pressure_measures.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 70 Columns: 7
 ── Column specification ────────────────────────────────────────────────────────
@@ -174,12 +168,12 @@ dbl (5): Number, Systolic (mmHg), MAP (mmHg), Diastolic (mmHg), HR (bpm)
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>blood_pressures <span class="ot">&lt;-</span> <span class="fu">rename</span>(blood_pressures, </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">sys  =</span> <span class="st">`</span><span class="at">Systolic (mmHg)</span><span class="st">`</span>,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">MAP  =</span> <span class="st">`</span><span class="at">MAP (mmHg)</span><span class="st">`</span>,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                          <span class="at">dias =</span> <span class="st">`</span><span class="at">Diastolic (mmHg)</span><span class="st">`</span>,</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                          <span class="at">HR   =</span> <span class="st">`</span><span class="at">HR (bpm)</span><span class="st">`</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(blood_pressures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>blood_pressures <span class="ot">&lt;-</span> <span class="fu">rename</span>(blood_pressures, </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">sys  =</span> <span class="st">`</span><span class="at">Systolic (mmHg)</span><span class="st">`</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">MAP  =</span> <span class="st">`</span><span class="at">MAP (mmHg)</span><span class="st">`</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>                          <span class="at">dias =</span> <span class="st">`</span><span class="at">Diastolic (mmHg)</span><span class="st">`</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>                          <span class="at">HR   =</span> <span class="st">`</span><span class="at">HR (bpm)</span><span class="st">`</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(blood_pressures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 70
 Columns: 7
@@ -191,7 +185,7 @@ $ MAP       &lt;dbl&gt; 84, NA, 90, 91, 98, NA, 87, 87, 83, 86, 86, 95, 88, 84, 
 $ dias      &lt;dbl&gt; 63, NA, 70, 71, 79, NA, 71, 67, 63, 68, 73, 74, 65, 60, 71, …
 $ HR        &lt;dbl&gt; 84, NA, 80, 78, 84, NA, 75, 91, 80, 76, 78, 85, 68, 71, 70, …</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(blood_pressures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(blood_pressures)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    Device              Number       Day_Night              sys       
  Length:70          Min.   : 1.00   Length:70          Min.   : 92.0  
@@ -210,10 +204,10 @@ $ HR        &lt;dbl&gt; 84, NA, 80, 78, 84, NA, 75, 91, 80, 76, 78, 85, 68, 71, 
  Max.   :102.00   Max.   :79.0   Max.   :94.00  
  NA's   :32       NA's   :2      NA's   :2      </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> blood_pressures, <span class="fu">aes</span>(<span class="at">x =</span> sys)) <span class="sc">+</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="co"># histogram for one numerical variable.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> blood_pressures, <span class="fu">aes</span>(<span class="at">x =</span> sys)) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="co"># histogram for one numerical variable.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
@@ -226,8 +220,8 @@ $ HR        &lt;dbl&gt; 84, NA, 80, 78, 84, NA, 75, 91, 80, 76, 78, 85, 68, 71, 
 </figure>
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> blood_pressures, <span class="fu">aes</span>(<span class="at">x =</span> sys)) <span class="sc">+</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>() <span class="co"># density for one numerical variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> blood_pressures, <span class="fu">aes</span>(<span class="at">x =</span> sys)) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>() <span class="co"># density for one numerical variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
 (`stat_density()`).</code></pre>
@@ -239,7 +233,91 @@ $ HR        &lt;dbl&gt; 84, NA, 80, 78, 84, NA, 75, 91, 80, 76, 78, 85, 68, 71, 
 </figure>
 </div>
 </div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()   <span class="co"># session information</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in system2("quarto", "-V", stdout = TRUE, env = paste0("TMPDIR=", :
+running command '"quarto"
+TMPDIR=C:/Users/uqzzhen5/AppData/Local/Temp/Rtmp4aiY1g/file145835206fc7 -V' had
+status 1</code></pre>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code>─ Session info ───────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.2 (2023-10-31 ucrt)
+ os       Windows 11 x64 (build 26100)
+ system   x86_64, mingw32
+ ui       RTerm
+ language (EN)
+ collate  English_Australia.utf8
+ ctype    English_Australia.utf8
+ tz       Australia/Brisbane
+ date     2025-11-13
+ pandoc   3.1.1 @ C:/Users/uqzzhen5/AppData/Local/Programs/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)
+ quarto   NA @ C:\\PROGRA~1\\Quarto\\bin\\quarto.exe
+
+─ Packages ───────────────────────────────────────────────────────────────────
+ ! package     * version date (UTC) lib source
+ P bit           4.0.5   2022-11-15 [?] CRAN (R 4.3.2)
+ P bit64         4.0.5   2020-08-30 [?] CRAN (R 4.3.2)
+ P cli           3.6.2   2023-12-11 [?] CRAN (R 4.3.2)
+ P colorspace    2.1-0   2023-01-23 [?] CRAN (R 4.3.2)
+ P crayon        1.5.2   2022-09-29 [?] CRAN (R 4.3.2)
+ P digest        0.6.33  2023-07-07 [?] CRAN (R 4.3.2)
+ P dplyr       * 1.1.4   2023-11-17 [?] CRAN (R 4.3.2)
+ P evaluate      0.23    2023-11-01 [?] CRAN (R 4.3.2)
+ P fansi         1.0.6   2023-12-08 [?] CRAN (R 4.3.2)
+ P farver        2.1.1   2022-07-06 [?] CRAN (R 4.3.2)
+ P fastmap       1.1.1   2023-02-24 [?] CRAN (R 4.3.2)
+ P forcats     * 1.0.0   2023-01-29 [?] CRAN (R 4.3.2)
+ P generics      0.1.3   2022-07-05 [?] CRAN (R 4.3.2)
+ P ggplot2     * 3.5.2   2025-04-09 [?] CRAN (R 4.3.2)
+ P glue          1.6.2   2022-02-24 [?] CRAN (R 4.3.2)
+ P gtable        0.3.4   2023-08-21 [?] CRAN (R 4.3.2)
+ P hms           1.1.3   2023-03-21 [?] CRAN (R 4.3.2)
+ P htmltools     0.5.7   2023-11-03 [?] CRAN (R 4.3.2)
+ P jsonlite      1.8.8   2023-12-04 [?] CRAN (R 4.3.2)
+ P knitr         1.45    2023-10-30 [?] CRAN (R 4.3.2)
+ P labeling      0.4.3   2023-08-29 [?] CRAN (R 4.3.1)
+ P lifecycle     1.0.4   2023-11-07 [?] CRAN (R 4.3.2)
+ P lubridate   * 1.9.3   2023-09-27 [?] CRAN (R 4.3.2)
+ P magrittr      2.0.3   2022-03-30 [?] CRAN (R 4.3.2)
+ P munsell       0.5.0   2018-06-12 [?] CRAN (R 4.3.2)
+ P pillar        1.9.0   2023-03-22 [?] CRAN (R 4.3.2)
+ P pkgconfig     2.0.3   2019-09-22 [?] CRAN (R 4.3.2)
+ P purrr       * 1.0.2   2023-08-10 [?] CRAN (R 4.3.2)
+ P R6            2.5.1   2021-08-19 [?] CRAN (R 4.3.2)
+ P readr       * 2.1.4   2023-02-10 [?] CRAN (R 4.3.2)
+   renv          1.1.5   2025-07-24 [1] CRAN (R 4.3.2)
+ P rlang         1.1.2   2023-11-04 [?] CRAN (R 4.3.2)
+ P rmarkdown     2.25    2023-09-18 [?] CRAN (R 4.3.2)
+ P rstudioapi    0.15.0  2023-07-07 [?] CRAN (R 4.3.2)
+ P scales        1.3.0   2023-11-28 [?] CRAN (R 4.3.2)
+ P sessioninfo   1.2.3   2025-02-05 [?] RSPM
+ P stringi       1.8.3   2023-12-11 [?] CRAN (R 4.3.2)
+ P stringr     * 1.5.1   2023-11-14 [?] CRAN (R 4.3.2)
+ P tibble      * 3.2.1   2023-03-20 [?] CRAN (R 4.3.2)
+ P tidyr       * 1.3.0   2023-01-24 [?] CRAN (R 4.3.2)
+ P tidyselect    1.2.0   2022-10-10 [?] CRAN (R 4.3.2)
+ P tidyverse   * 2.0.0   2023-02-22 [?] CRAN (R 4.3.2)
+ P timechange    0.2.0   2023-01-11 [?] CRAN (R 4.3.2)
+ P tzdb          0.4.0   2023-05-12 [?] CRAN (R 4.3.2)
+ P utf8          1.2.4   2023-10-22 [?] CRAN (R 4.3.2)
+ P vctrs         0.6.5   2023-12-01 [?] CRAN (R 4.3.2)
+ P vroom         1.6.5   2023-12-05 [?] CRAN (R 4.3.2)
+ P withr         2.5.2   2023-10-30 [?] CRAN (R 4.3.2)
+ P xfun          0.41    2023-11-01 [?] CRAN (R 4.3.2)
+ P yaml          2.3.10  2024-07-26 [?] RSPM
+
+ [1] C:/Users/uqzzhen5/Dropbox/manuscript/Editor/RERITE/IEEE_ITSC2025 Tutorial/RStudio_Quarto_Activity/renv/library/R-4.3/x86_64-w64-mingw32
+ [2] C:/Users/uqzzhen5/AppData/Local/R/cache/R/renv/sandbox/R-4.3/x86_64-w64-mingw32/1e360f03
+
+ * ── Packages attached to the search path.
+ P ── Loaded and on-disk path mismatch.
+
+──────────────────────────────────────────────────────────────────────────────</code></pre>
+</div>
+</div>
+<p>```</p>
 </section>
 </section>
 

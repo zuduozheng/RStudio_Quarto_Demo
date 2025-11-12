@@ -60,6 +60,10 @@ ggplot(data = blood_pressures, aes(x = sys)) +
 
 ggplot(data = blood_pressures, aes(x = sys)) +
   geom_density() # density for one numerical variable
+
+sessioninfo::session_info()   # session information
+```
+
 ```
 
 
