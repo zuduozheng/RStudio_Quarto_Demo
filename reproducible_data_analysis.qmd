@@ -1,0 +1,123 @@
+---
+title: "Using Rstudio and Quarto for Reproducible Research"
+format: 
+  revealjs:
+    chalkboard: true
+    slide-number: true
+    css: styles.css
+editor: visual
+execute:
+  echo: true
+author: Professor Zuduo Zheng, School of Civil Engineering, University of Queensland
+affiliation: School of Civil Engineering, University of Queensland
+date: today
+---
+
+## Quarto introduction
+
+Quarto provides a unified authoring framework for data science, combining your code, its results, and your prose. Quarto documents are fully reproducible and support dozens of output formats, like PDFs, Word files, presentations, and more.
+
+## Three components of a Quarto file
+
+![](images/clipboard-3062737476.png)
+
+## Generating output
+
+-   You can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk)
+-   To produce a complete report containing all text, code, and results, click “Render”
+
+## Visual editor
+
+-   The easiest way to get started with Quarto in RStudio is the visual editor.
+-   The Visual editor in RStudio provides a WYSIWYM (**What You See Is What You Mean**) interface for authoring Quarto documents.
+-   Very similar to editing documents in MS Word or Google Docs.
+
+## Source editor
+
+You can also edit Quarto documents using the Source editor in RStudio if you are familiar with R scripts or R Markdown documents
+
+You can format the text by following its syntax. An easy way to learn how to format text in the source editor is by checking **Markdown Quick Reference**.
+
+## Markdown quick reference
+
+![](images/clipboard-1511694009.png){width="550"}
+
+## Demonstration: Using Quarto
+
+## Managing dependencies in RStudio
+
+::: columns
+::: {.column width="90%"}
+-   The *renv.lock* file is the heart of the **renv** system — it’s what makes your R project reproducible.
+-   *renv.lock* is a **snapshot** of your R project’s package environment. It records: Each package you’ve installed; The exact version of each package; The source where each package came from (e.g., CRAN, GitHub); The R version you used.
+-   So, when you or someone else runs *renv::restore()*, R automatically reinstalls those exact package versions — recreating the same environment.
+:::
+
+::: {.column width="10%"}
+![](images/clipboard-400589234.png){width="100" height="100"}
+:::
+:::
+
+## A simple reproducible structure
+
+::: columns
+::: {.column width="40%"}
+![](Table.png){width="350"}
+:::
+
+::: {.column width="60%"}
+![](RR_Structure_R.png)
+:::
+:::
+
+## A README.md or txt Template
+
+::: small-bullets
+A simple guide for others (and your future self). An example:\
+Title: Assessing Emission Reduction Scenarios in Urban Transport Networks.\
+This repository contains data, code, and results for the paper.\
+Reproduce the analysis:\
+1. Clone this repository.\
+2. Open in RStudio.\
+3. Run: `renv::restore()` to install required packages.\
+4. Render the report: `quarto render reports/main_report.qmd`.\
+Folder structure:\
+- `data/` → Raw and processed input data\
+- `scripts/` → Core R scripts for cleaning and analysis\
+- `reports/` → Quarto manuscript\
+- `results/` → Outputs (tables, figures, models, summary stats)
+:::
+
+## 
+
+![](images/clipboard-308484903.png){width="574"} ![](images/clipboard-1972633705.png){width="67" height="19"} ![](images/clipboard-4177186445.png)
+
+## Five Levels of Repository Analysis
+
+::: small-bullets
+-   <span style="color:red;">Level 1 granted if the repository was not empty. </span>
+-   <span style="color:red;">Level 2 granted if the repository contained more than just one type of files (e.g., source code and data, or data and model).</span>
+-   <span style="color:red;">Level 3 granted if the repository contained not only files but also a basic documentation (e.g., a README file).</span>
+-   Level 4 granted if the repository contained not only files but also a good, reader-friendly documentation (e.g., README file contains text with installation instructions and information, instead of just stating the title of the work and indexing the repository).
+-   Level 5 granted, if source code, data, and models (where applicable) were provided, as well as an extensive, reader-friendly documentation (including working examples, illustrations, etc.), and information on licenses.
+:::
+
+## Repository Analysis
+
+![](images/clipboard-652932128.png)
+
+## Bottome Line
+
+Start making your next manuscript reproducible as much as you can; **Don’t let perfect be the enemy of good.**
+
+![](images/clipboard-1273662591.png)
+
+## Practice
+
+Practice what you’ve learned by creating a brief CV. You should include the following headings:
+
+-   Contact Information
+-   Education
+-   Employment
+-   Honors and Awards
+-   R Code Example (import the blood pressure data; present its summary statistics; and plot the histogram and density distribution of systolic blood pressure; add a README file; Capture your R project’s package environment; **Challenge yourself**: create a Github repository and manage it using RStudio. _Hint: you need to install Git on your computer._)
