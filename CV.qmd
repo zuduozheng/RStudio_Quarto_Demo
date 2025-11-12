@@ -1,0 +1,65 @@
+---
+title: "Curriculum Vitae"
+output:
+  quarto::quarto_html:
+    theme: spacelab
+---
+
+# Zuduo Zheng
+
+## Contact Information
+
+-   Address: 50-S412, Saint Lucia, Brisbane, QLD, 4072 Australia
+-   Phone: (07) 344 31371
+-   Email: zuduo.zheng\@uq.edu.au
+-   UQ Profile: [researchers.uq.edu.au/zuduozheng](https://researchers.uq.edu.au/researcher/20105)
+-   Google Scholar Profile: [scholar.google.com.au/zuduozheng](https://scholar.google.com.au/citations?user=cOglTm4AAAAJ&hl=en)
+-   Personal website:[connectedandautonomoustransport.com](http://www.connectedandautonomoustransport.com/)
+
+## Education
+
+### PhD in Traffic Engineering
+
+-   Arizona State University, Phoenix, Arizona, USA
+-   Graduation Date: August 2010
+
+## Employment
+
+-   Professor, The University of Queensland, Australia, 2024 –
+-   Queensland Department of Transport and Main Roads (TMR) Endowed Chair (Deputy), 2023 - 2030.
+-   Associate Professor, The University of Queensland, Australia, 2018 – 2023
+-   Associate Professor, Queensland University of Technology, Australia, 2017
+-   DECRA Research Fellow, Australian Research Council, 2016 – 2019
+-   Senior Lecturer, Queensland University of Technology, Australia, 2014 – 2016
+-   Lecturer, Queensland University of Technology, Australia, 2011 – 2014
+-   Early Career Academic fellow, Queensland University of Technology, Australia , 2011 – 2012
+-   Research Associate, the United States Studies Centre, University of Sydney, 2012
+-   Post Doctoral Researcher, Minnesota Traffic Observatory, University of Minnesota, Twin Cities, United States, 2010 – 2011
+-   Graduate Student Research Associate, Department of Civil & Environmental Engineering, Arizona State University, United States, August 2007 – July 2010
+
+## Honors and Awards
+
+-   To be added.
+
+## R Code Example
+
+```{r}
+library(tidyverse)
+blood_pressures <- read_csv("blood_pressure_measures.csv")
+blood_pressures <- rename(blood_pressures, 
+                          sys  = `Systolic (mmHg)`,
+                          MAP  = `MAP (mmHg)`,
+                          dias = `Diastolic (mmHg)`,
+                          HR   = `HR (bpm)`)
+glimpse(blood_pressures)
+
+summary(blood_pressures)
+
+ggplot(data = blood_pressures, aes(x = sys)) +
+  geom_histogram() # histogram for one numerical variable.
+
+ggplot(data = blood_pressures, aes(x = sys)) +
+  geom_density() # density for one numerical variable
+```
+
+
