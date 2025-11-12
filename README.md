@@ -1,14 +1,3 @@
----
-title: "README"
-author: "Zuduo Zheng; The University of Queensland"
-date: "2025-11-12"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 <a href="https://github.com/zuduozheng/RStudio_Quarto_Demo">Demonstration on how to make a reproducible CV using RStudio and Quarto</a> © 2025 by <a href="http://www.connectedandautonomoustransport.com/dr-zhengs-research.html">Zuduo Zheng</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 ## Instruction on how to use this demo
