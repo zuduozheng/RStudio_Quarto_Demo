@@ -47,14 +47,20 @@ You can format the text by following its syntax. An easy way to learn how to for
 ## Managing dependencies in RStudio
 
 ::: columns
-::: {.column width="90%"}
+::: {.column width="80%"}
 -   The *renv.lock* file is the heart of the **renv** system — it’s what makes your R project reproducible.
 -   *renv.lock* is a **snapshot** of your R project’s package environment. It records: Each package you’ve installed; The exact version of each package; The source where each package came from (e.g., CRAN, GitHub); The R version you used.
 -   So, when you or someone else runs *renv::restore()*, R automatically reinstalls those exact package versions — recreating the same environment.
 :::
 
-::: {.column width="10%"}
+::: {.column width="20%"}
 ![](images/clipboard-400589234.png){width="100" height="100"}
+
+- install.packages("renv")
+- renv::init()
+- renv::snapshot()
+- renv::restore()
+- sessioninfo::session_info()
 :::
 :::
 

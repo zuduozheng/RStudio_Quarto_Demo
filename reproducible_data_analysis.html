@@ -380,14 +380,21 @@ Professor Zuduo Zheng, School of Civil Engineering, University of Queensland
 <section id="managing-dependencies-in-rstudio" class="slide level2">
 <h2>Managing dependencies in RStudio</h2>
 <div class="columns">
-<div class="column" style="width:90%;">
+<div class="column" style="width:80%;">
 <ul>
 <li>The <em>renv.lock</em> file is the heart of the <strong>renv</strong> system — it’s what makes your R project reproducible.</li>
 <li><em>renv.lock</em> is a <strong>snapshot</strong> of your R project’s package environment. It records: Each package you’ve installed; The exact version of each package; The source where each package came from (e.g., CRAN, GitHub); The R version you used.</li>
 <li>So, when you or someone else runs <em>renv::restore()</em>, R automatically reinstalls those exact package versions — recreating the same environment.</li>
 </ul>
-</div><div class="column" style="width:10%;">
+</div><div class="column" style="width:20%;">
 <p><img data-src="images/clipboard-400589234.png" width="100" height="100"></p>
+<ul>
+<li>install.packages(“renv”)</li>
+<li>renv::init()</li>
+<li>renv::snapshot()</li>
+<li>renv::restore()</li>
+<li>sessioninfo::session_info()</li>
+</ul>
 </div>
 </div>
 </section>
