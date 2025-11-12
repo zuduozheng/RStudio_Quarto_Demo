@@ -6,6 +6,7 @@ This is a demonstration on how to make a reproducible CV using RStudio and Quart
 
 Once you have downloaded all the files in this repository, by following the steps below you can easily re-generate exactly the same CV document in CV.html.
 
+Step 0: if you are new to RStudio and Quarto, please go through _reproducible_data_analysis.html_ first.\
 Step 1: run _renv::restore()_ in the RStudio console.\
 Step 2: render _CV.qmd_.
 
