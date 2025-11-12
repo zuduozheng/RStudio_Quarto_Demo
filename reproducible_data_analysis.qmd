@@ -95,9 +95,9 @@ Folder structure:\
 ## Five Levels of Repository Analysis
 
 ::: small-bullets
--   <span style="color:red;">Level 1 granted if the repository was not empty. </span>
--   <span style="color:red;">Level 2 granted if the repository contained more than just one type of files (e.g., source code and data, or data and model).</span>
--   <span style="color:red;">Level 3 granted if the repository contained not only files but also a basic documentation (e.g., a README file).</span>
+-   [Level 1 granted if the repository was not empty.]{style="color:red;"}
+-   [Level 2 granted if the repository contained more than just one type of files (e.g., source code and data, or data and model).]{style="color:red;"}
+-   [Level 3 granted if the repository contained not only files but also a basic documentation (e.g., a README file).]{style="color:red;"}
 -   Level 4 granted if the repository contained not only files but also a good, reader-friendly documentation (e.g., README file contains text with installation instructions and information, instead of just stating the title of the work and indexing the repository).
 -   Level 5 granted, if source code, data, and models (where applicable) were provided, as well as an extensive, reader-friendly documentation (including working examples, illustrations, etc.), and information on licenses.
 :::
@@ -120,4 +120,8 @@ Practice what you’ve learned by creating a brief CV. You should include the fo
 -   Education
 -   Employment
 -   Honors and Awards
--   R Code Example (import the blood pressure data; present its summary statistics; and plot the histogram and density distribution of systolic blood pressure; add a README file; Capture your R project’s package environment; **Challenge yourself**: create a Github repository and manage it using RStudio. _Hint: you need to install Git on your computer._)
+-   R Code Example (import the blood pressure data; present its summary statistics; and plot the histogram and density distribution of systolic blood pressure; add a README file; Capture your R project’s package environment; **Challenge yourself**: create a Github repository and manage it using RStudio. *Hint: you need to install Git on your computer.*)
+
+## QR Code: An Example
+
+![](qrcode_github_CV_demo.png)
